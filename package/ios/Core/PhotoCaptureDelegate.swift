@@ -51,8 +51,8 @@ class PhotoCaptureDelegate: GlobalReferenceHolder, AVCapturePhotoCaptureDelegate
       let path = try FileUtils.writePhotoToTempFile(photo: photo, metadataProvider: metadataProvider)
 
       let exif = photo.metadata["{Exif}"] as? [String: Any]
-      let width = exif?["PixelXDimension"]
-      let height = exif?["PixelYDimension"]
+      let width = exif?["PixelYDimension"]
+      let height = exif?["PixelXDimension"]
       let exifOrientation = photo.metadata[String(kCGImagePropertyOrientation)] as? UInt32 ?? CGImagePropertyOrientation.up.rawValue
       let cgOrientation = CGImagePropertyOrientation(rawValue: exifOrientation) ?? CGImagePropertyOrientation.up
       let orientation = getOrientation(forExifOrientation: cgOrientation)
@@ -111,5 +111,18 @@ class PhotoCaptureDelegate: GlobalReferenceHolder, AVCapturePhotoCaptureDelegate
     default:
       return false
     }
+  }
+
+  func photoOutput(_ output: AVCapturePhotoOutput, willCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
+
+
+            AudioServicesDisposeSystemSoundID(1108)
+
+
+  }
+  func photoOutput(_ output: AVCapturePhotoOutput, didCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
+
+            AudioServicesDisposeSystemSoundID(1108)
+
   }
 }
