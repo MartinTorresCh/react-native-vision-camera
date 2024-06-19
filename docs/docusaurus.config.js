@@ -1,8 +1,6 @@
-const { themes } = require('prism-react-renderer')
-
 module.exports = {
   title: 'VisionCamera',
-  tagline: '📸 A powerful, high-performance React Native Camera library.',
+  tagline: '📸 The Camera library that sees the vision.',
   url: 'https://react-native-vision-camera.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -12,33 +10,12 @@ module.exports = {
   projectName: 'react-native-vision-camera',
   themeConfig: {
     algolia: {
-      appId: 'NRK7PZXU6O',
-      apiKey: '33d54e627c4587a6d8dbff79d5209e46',
-      indexName: 'react-native-vision-camera2',
-      contextualSearch: false
-    },
-    colorMode: {
-      respectPrefersColorScheme: true
+      appId: 'HBHXBT6T9E',
+      apiKey: '64bc77eda92b7efcb7003b56815f1113',
+      indexName: 'react-native-vision-camera',
     },
     prism: {
-      theme: themes.github,
-      darkTheme: themes.palenight,
-      additionalLanguages: [
-        'bash',
-        'json',
-        'kotlin',
-        'ruby',
-        'cmake',
-        'groovy',
-        'java',
-      ],
-    },
-    announcementBar: {
-      id: 'shadowlens',
-      content: '<b>ShadowLens is out!!! 🥳🥳</b> See VisionCamera in action: <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/app/shadowlens/id6471849004">Download ShadowLens for iOS</a> or <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.mrousavy.shadowlens">Download ShadowLens for Android</a>',
-      backgroundColor: '#e39600',
-      textColor: '#ffffff',
-      isCloseable: false,
+      additionalLanguages: ['swift', 'java', 'kotlin'],
     },
     navbar: {
       title: 'VisionCamera',
@@ -58,13 +35,8 @@ module.exports = {
           position: 'left'
         },
         {
-          href: 'https://github.com/mrousavy/react-native-vision-camera/tree/main/package/example',
+          href: 'https://github.com/mrousavy/react-native-vision-camera/tree/main/example',
           label: 'Example App',
-          position: 'left'
-        },
-        {
-          href: 'https://mrousavy.com/projects/shadowlens',
-          label: 'ShadowLens',
           position: 'left'
         },
         {
@@ -90,17 +62,13 @@ module.exports = {
             },
             {
               label: 'Example App',
-              href: 'https://github.com/mrousavy/react-native-vision-camera/tree/main/package/example',
+              href: 'https://github.com/mrousavy/react-native-vision-camera/tree/main/example',
             },
           ],
         },
         {
           title: 'Community',
           items: [
-            {
-              label: 'Community Discord',
-              href: 'https://discord.com/invite/6CSHz2qAvA',
-            },
             {
               label: 'GitHub discussions',
               href: 'https://github.com/mrousavy/react-native-vision-camera/discussions',
@@ -130,12 +98,8 @@ module.exports = {
     image: 'img/11.png',
     metadata: [
       {
-        name: 'author',
-        content: 'Marc Rousavy'
-      },
-      {
         name: 'keywords',
-        content: 'react, native, camera, react-native, react-native-camera, photo, record, video, react-native-vision-camera, VisionCamera, frame-processor, frame-processing, frame, qr, qr-code, barcode, scanning, detector, detection, documentation, coding, docs, guides, marc, rousavy, mrousavy'
+        content: 'documentation, coding, docs, guides, camera, react, native, react-native'
       },
       {
         name: 'og:title',
@@ -147,13 +111,21 @@ module.exports = {
       },
       {
         name: 'og:description',
-        content: 'A powerful, high-performance React Native Camera library.'
+        content: '📸 The Camera library that sees the vision.'
       },
       {
         name: 'og:image',
         content: '/img/11.png'
       },
     ],
+    announcementBar: {
+      id: 'support_us',
+      content:
+        '<b>I am currently working on <a target="_blank" href="https://github.com/mrousavy/react-native-vision-camera/issues/1376">VisionCamera V3 ✨</a> which brings a lot of new features and a full rewrite on Android. Please consider <a target="_blank" href="https://github.com/sponsors/mrousavy">sponsoring me on GitHub</a> so I can work on this.</b>',
+      backgroundColor: '#ff5c5c',
+      textColor: '#ffffff',
+      isCloseable: false,
+    },
   },
   presets: [
     [
@@ -184,9 +156,9 @@ module.exports = {
       'docusaurus-plugin-typedoc',
       {
         name: 'VisionCamera',
-        entryPoints: ['../package/src'],
-        exclude: "../package/src/index.ts",
-        tsconfig: '../package/tsconfig.json',
+        entryPoints: ['../src'],
+        exclude: "../src/index.ts",
+        tsconfig: '../tsconfig.json',
         watch: process.env.TYPEDOC_WATCH,
         excludePrivate: true,
         excludeProtected: true,
@@ -199,4 +171,4 @@ module.exports = {
       },
     ],
   ],
-}
+};
