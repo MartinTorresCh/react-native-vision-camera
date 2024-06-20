@@ -6,7 +6,7 @@
 /yarn.lock
 
 # when switching from v2 -> v3 branches
-/example
-/ios
-/android
-/lib
+#/example
+#/ios
+#/android
+#/lib
